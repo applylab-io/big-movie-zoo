@@ -1,0 +1,10 @@
+.Header {
+    flex-shrink: 0;
+    background-color: #000;
+}
+
+.Container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}

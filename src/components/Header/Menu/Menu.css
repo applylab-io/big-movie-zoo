@@ -1,0 +1,46 @@
+/*Large Screens*/
+.Menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.Menu > ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+}
+
+.Menu a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    color: #fff;
+}
+
+.Menu-bars-small {
+    display: none;
+}
+
+/*Medium Screens*/
+@media all and (max-width: 800px) {
+    .Menu > ul{
+        justify-content: space-around;
+    }
+    .Menu a{
+        font-size: x-small;
+    }
+}
+
+/*Small Screens*/
+@media all and (max-width: 600px) {
+    .Menu > ul{
+        display: none;
+    }
+    .Menu-bars-small {
+        padding: 0.5em;
+        display: inline-block;
+    }
+}

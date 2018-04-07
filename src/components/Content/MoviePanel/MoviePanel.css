@@ -1,0 +1,4 @@
+.Movie-panel {
+    display: flex;
+    flex-direction: column;
+}

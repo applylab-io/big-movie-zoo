@@ -1,0 +1,12 @@
+.Deck {
+    min-width: 100%;
+    max-height: 190px;
+    display: flex;
+    flex-flow: row;
+    overflow-x: auto;
+}
+
+
+.Deck::-webkit-scrollbar {
+    display: none;
+}

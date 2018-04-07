@@ -1,0 +1,22 @@
+.Footer {
+    flex-shrink: 0;
+    background-color: #000;
+    width: 100%;
+    margin: 0;
+}
+
+.Legal {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.Legal > p {
+    display: block;
+    padding: 1em;
+    font-size: 0.7em;
+}
+
+.Legal a{
+    color: #fff;
+}
