@@ -1,0 +1,1 @@
+[#1]: Create Skeleton - A basic skeleton is setup for big-movie-zoo SPA using React for Web.
