@@ -18,5 +18,6 @@
     "eject": "react-scripts eject"
   },
   "author": "Applylab.io",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://applylab-io.github.io/big-movie-zoo/"
 }
