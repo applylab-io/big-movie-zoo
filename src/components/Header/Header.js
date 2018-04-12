@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Menu from './Menu/Menu';
-import Logo from './Logo/Logo';
 import BrandingArea from './BrandingArea/BrandingArea';
 import './Header.css';
 /**
