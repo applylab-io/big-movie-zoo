@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import VideoPlayer from './VideoPlayer/VideoPlayer';
 import './Player.css'
+import {constants} from './constants';
 
 class Player extends Component {
     constructor(props) {
@@ -13,8 +14,8 @@ class Player extends Component {
                     src: this.props.videoSrc,
                     type: this.props.videoFormat
                 }],
-                width: this.props.width,
-                height: this.props.height                
+                width: constants.PLAYER_DEFAULT_WIDTH,
+                height: constants.PLAYER_DEFAULT_HEIGHT                
             }
         }
     }

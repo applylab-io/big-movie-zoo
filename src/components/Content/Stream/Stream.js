@@ -13,7 +13,7 @@ class Stream extends Component {
         return (
             <div>
                 <div>
-                    <Player videoFormat="video/mp4" videoSrc={promo} width="800px" height="450px"/>
+                    <Player videoFormat="video/mp4" videoSrc={promo}/>
                 </div>
             </div>
         );
