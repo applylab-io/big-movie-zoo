@@ -17,11 +17,12 @@
     text-decoration: none;
     display: inline-block;
     padding: 1em;
-    color: #fff;
+    color: gray;
 }
 
 .Menu-bars-small {
     display: none;
+    color: gray;
 }
 
 /*Medium Screens*/
@@ -31,6 +32,7 @@
     }
     .Menu a{
         font-size: x-small;
+        color: gray;
     }
 }
 

@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import VideoPlayer from './VideoPlayer/VideoPlayer';
 import './Player.css'
-import promo from '../../../videos/innovation.mp4';
-
-const videoJsOptions = {
-    autoplay: true,
-    controls: true,
-    sources: [{
-        src: promo,
-        type: 'video/mp4'
-    }],
-    width: '1024px',
-    height: '576px'
-};
+import {constants} from './constants';
 
 class Player extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            videoJsOptions: {
+                autoplay: false,
+                controls: true,
+                sources: [{
+                    src: this.props.videoSrc,
+                    type: this.props.videoFormat
+                }],
+                width: constants.PLAYER_DEFAULT_WIDTH,
+                height: constants.PLAYER_DEFAULT_HEIGHT                
+            }
+        }
+    }
+
     render() {
         return (
-            <div className="Video-player">
-                <VideoPlayer { ...videoJsOptions } />
+            <div className="Player">
+                <VideoPlayer { ...this.state.videoJsOptions } />
             </div >
         );
     }

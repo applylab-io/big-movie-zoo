@@ -1,6 +1,8 @@
 .Header {
     flex-shrink: 0;
-    background-color: #000;
+    background-color: #222;
+    font-size: small;
+    font-weight: bold;
 }
 
 .Container {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Player from '../Player/Player';
+import promo from '../../../videos/innovation.mp4';
 
 /**
  * 
@@ -12,7 +13,7 @@ class Stream extends Component {
         return (
             <div>
                 <div>
-                    <Player />
+                    <Player videoFormat="video/mp4" videoSrc={promo}/>
                 </div>
             </div>
         );

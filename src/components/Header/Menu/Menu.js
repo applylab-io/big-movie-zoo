@@ -13,7 +13,6 @@ class Menu extends Component {
         return (
             <div className="Menu">
                 <ul>
-                    <li><NavLink to="/test"><FontAwesome name="wrench" /> Test</NavLink></li>
                     <li><NavLink to="/"><FontAwesome name="home" /> Home</NavLink></li>
                     <li><NavLink to="/film"><FontAwesome name="film" /> Films</NavLink></li>
                     <li><NavLink to="/language"><FontAwesome name="language" /> By Language</NavLink></li>
