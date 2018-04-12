@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './Menu/Menu';
 import Logo from './Logo/Logo';
+import BrandingArea from './BrandingArea/BrandingArea';
 import './Header.css';
 /**
  * 
@@ -13,7 +14,7 @@ class Header extends Component {
         return (
             <header className="Header">
                 <div className="Container">
-                    <Logo />
+                    <BrandingArea />
                     <Menu />
                 </div>
             </header>

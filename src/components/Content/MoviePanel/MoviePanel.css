@@ -1,4 +1,11 @@
 .Movie-panel {
     display: flex;
     flex-direction: column;
+    color: red;
+}
+
+.Movie-panel > h3 {
+    color: red;
+    font-family: "Verdana";
+    font-weight: normal;
 }

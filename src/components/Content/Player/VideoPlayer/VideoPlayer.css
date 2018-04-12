@@ -1,0 +1,8 @@
+.Video-player {
+    margin: auto;
+}
+
+.video-js .vjs-big-play-button {
+    top: 45%;
+    left: 45%
+}
