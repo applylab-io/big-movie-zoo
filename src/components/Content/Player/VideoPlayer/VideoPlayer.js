@@ -24,7 +24,7 @@ class VideoPlayer extends React.Component {
   render() {
     return (
       <div data-vjs-player className="Video-player">
-        <video ref={node => this.videoNode = node} className="video-js"></video>
+        <video controls autoplay ref={node => this.videoNode = node} className="video-js"></video>
       </div>
     )
   }

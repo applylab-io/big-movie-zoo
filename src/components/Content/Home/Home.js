@@ -9,13 +9,20 @@ import './Home.css';
  * @extends {Component}
  */
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            //TODO: Pull this from Dynamo DB
+            categories: ['action', 'sci-fi', 'comedy', 'fantasy', 'romantic', 'superhero']
+        }
+    }
+
     render() {
+        const moviePanels = this.state.categories.map((category, index) => <MoviePanel title={category.toUpperCase()}/>);
         return (
             <div>
                 <div className="Home">
-                    <MoviePanel title="Trending" faName="fire" />
-                    <MoviePanel title="Recommended" faName="thumbs-up" />
-                    <MoviePanel title="Big Movie Zoo Originals" faName="camera-retro" />
+                    {moviePanels}
                 </div>
             </div>
         );
