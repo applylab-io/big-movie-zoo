@@ -37,7 +37,7 @@
 }
 
 /*Small Screens*/
-@media all and (max-width: 600px) {
+@media all and (max-width: 640px) {
     .Menu > ul{
         display: none;
     }

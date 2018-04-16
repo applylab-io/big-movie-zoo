@@ -6,11 +6,23 @@ import FontAwesome from 'react-fontawesome';
 class Poster extends Component{
     constructor(props) {
         super(props);
+        this.state = {
+            target: this.props.target,
+            title: this.props.title,
+            genres: this.props.genres
+        }
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        this.props.history.push("/stream");
+        this.props.history.push({
+            pathname: '/stream',
+            details: {
+                target: this.state.target,
+                title: this.state.title,
+                genres: this.state.genres
+            }
+        });
     }
 
     render() {

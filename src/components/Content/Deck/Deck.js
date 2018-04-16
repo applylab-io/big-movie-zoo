@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
 import './Deck.css';
 import Poster from '../Poster/Poster';
-import targetVideo from '../../../videos/innovation.mp4';
-
-
-let posters = [];
-for (let index = 0; index < 10; index++) {
-    const url = "https://picsum.photos/640/360?image=" + index;
-    posters.push(<Poster thumbnail={url} key={index} target={targetVideo}/>);   
-}
-
 
 class Deck extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: this.props.title.toLowerCase(),
+            thumbnails: this.props.thumbnails
+        }
+    }
     render() {
+        const posters = this.state.thumbnails
+        .filter((movie) => movie.categories.indexOf(this.state.title) > -1)
+        .map((thumbnail, index) => <Poster thumbnail={thumbnail.url} key={index} target={thumbnail.target} title={thumbnail.title} genres={thumbnail.categories} />);
         return(
             <section className="Deck">  
                 {posters}
