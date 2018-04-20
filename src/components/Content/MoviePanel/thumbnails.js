@@ -29,7 +29,7 @@ const thumbnails = [
         language: 'english',        
         title:'The Dark Knight',
         target: 'https://s3.ap-south-1.amazonaws.com/bigmoviezoo.src.videos/the_dark_knight_official_trailer.mp4',
-        url: 'https://www.wallpapersin4k.org/wp-content/uploads/2017/04/Movie-Poster-Wallpaper-6.jpg'
+        url: 'https://i.ytimg.com/vi/w1B3Mgklfd0/hqdefault.jpg'
     },
     {
         index: '4',

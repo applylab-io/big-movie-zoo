@@ -9,7 +9,12 @@ import './Home.css';
  * @extends {Component}
  */
 class Home extends Component {
-    constructor(props) {
+    /**
+     * Creates an instance of Home.
+     * @param {any} props 
+     * @memberof Home
+     */
+    constructor(props) {        
         super(props);
         this.state = {
             //TODO: Pull this from Dynamo DB
@@ -17,8 +22,15 @@ class Home extends Component {
         }
     }
 
+    /**
+     * 
+     * 
+     * @returns 
+     * @memberof Home
+     */
     render() {
-        const moviePanels = this.state.categories.map((category, index) => <MoviePanel title={category.toUpperCase()}/>);
+        //Filter and return movie panel components based on the category passed
+        const moviePanels = this.state.categories.map((category, index) => <MoviePanel key={index} title={category.toUpperCase()}/>);
         return (
             <div>
                 <div className="Home">

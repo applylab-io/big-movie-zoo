@@ -1,6 +1,6 @@
 {
   "name": "big-movie-zoo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "font-awesome": "^4.7.0",
@@ -9,6 +9,7 @@
     "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
+    "uuid": "^3.2.1",
     "video.js": "^6.7.3"
   },
   "scripts": {
