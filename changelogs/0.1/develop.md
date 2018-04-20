@@ -15,3 +15,8 @@ gh-pages support for build. See the live demo -> https://applylab-io.github.io/b
 - Themes were updated.
 - Made the player more responsive
 - Handle the width and height as state of Player component.
+
+# Video does not play if clicked from Stream page #10
+- State management done better at VideoPlayer component
+- Added dynamic paths to form new URLs when a movie poster is clicked
+- Component life cycle handled in a better way
