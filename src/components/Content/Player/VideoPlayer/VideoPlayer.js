@@ -4,11 +4,22 @@ import 'video.js/dist/video-js.css';
 import './VideoPlayer.css';
 
 class VideoPlayer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0
+    }
+  }
+
+  stepUp() {
+    let counter = this.state.counter;
+    this.setState({
+      counter: counter + 1
+    })
+  }
+
   componentDidMount() {
-    // instantiate Video.js
-    this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
-      console.log('onPlayerReady', this)
-    });
+    this.stepUp();
   }
 
   // destroy player on unmount
@@ -18,13 +29,28 @@ class VideoPlayer extends React.Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.sources[0].src !== this.props.sources[0].src) {
+      this.stepUp();
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(this.state.counter !== prevState.counter) {
+      if(this.player) {
+        this.player.dispose();
+      }
+      this.player = videojs(this.videoNode, this.props);
+    }
+  }
+
   // wrap the player in a div with a `data-vjs-player` attribute
   // so videojs won't create additional wrapper in the DOM
   // see https://github.com/videojs/video.js/pull/3856
   render() {
     return (
-      <div data-vjs-player className="Video-player">
-        <video controls autoplay ref={node => this.videoNode = node} className="video-js"></video>
+      <div data-vjs-player className="Video-player" key={this.state.counter}>
+        <video ref={node => this.videoNode = node} className="video-js"></video>
       </div>
     )
   }

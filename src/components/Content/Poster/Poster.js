@@ -1,26 +1,23 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
+import uuidv4 from 'uuid/v4';
 import './Poster.css';
 import FontAwesome from 'react-fontawesome';
 
 class Poster extends Component{
     constructor(props) {
         super(props);
-        this.state = {
-            target: this.props.target,
-            title: this.props.title,
-            genres: this.props.genres
-        }
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
+        const uuid = uuidv4();
         this.props.history.push({
-            pathname: '/stream',
+            pathname: `/stream/${uuid}`,
             details: {
-                target: this.state.target,
-                title: this.state.title,
-                genres: this.state.genres
+                target: this.props.target,
+                title: this.props.title,
+                genres: this.props.genres
             }
         });
     }

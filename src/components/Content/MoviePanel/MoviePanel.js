@@ -3,7 +3,18 @@ import './MoviePanel.css';
 import Deck from '../Deck/Deck';
 import thumbnails from './thumbnails';
 
+/**
+ * 
+ * 
+ * @class MoviePanel
+ * @extends {Component}
+ */
 class MoviePanel extends Component {
+    /**
+     * Creates an instance of MoviePanel.
+     * @param {any} props 
+     * @memberof MoviePanel
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -11,6 +22,12 @@ class MoviePanel extends Component {
             thumbnails: thumbnails
         }
     }
+    /**
+     * 
+     * 
+     * @returns 
+     * @memberof MoviePanel
+     */
     render() {
         return(
             <div className="Movie-panel">

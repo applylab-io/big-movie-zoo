@@ -16,7 +16,7 @@ class Content extends Component {
             <div className="Content">
                 <Route exact path='/' component={Home} />
                 <Route path='/test' component={Stream} />
-                <Route path='/stream' component={Stream} />
+                <Route path='/stream/*' component={Stream} />
             </div>
         );
     }
