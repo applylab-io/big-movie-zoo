@@ -17,6 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "preversion": "npm run test",
+    "version": "npm run build",
+    "postversion": "git push",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
