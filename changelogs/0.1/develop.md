@@ -20,3 +20,9 @@ gh-pages support for build. See the live demo -> https://applylab-io.github.io/b
 - State management done better at VideoPlayer component
 - Added dynamic paths to form new URLs when a movie poster is clicked
 - Component life cycle handled in a better way
+
+# Add responsive menu for small screens. A popup with just icons #12
+- Updated CSS
+- Used Component state
+- Added Click handle to Menu component
+- Also shipped npm bump version scripts with this. Use `npm version <patch|minor|major` command instead of `git push` going forward.
