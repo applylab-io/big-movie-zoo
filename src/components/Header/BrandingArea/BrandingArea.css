@@ -1,6 +1,5 @@
 .Branding-Area {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+    margin-top: 0.5em;
 }
