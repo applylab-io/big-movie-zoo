@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
+import constants from './constants';
 import './Menu.css';
 import FontAwesome from 'react-fontawesome';
 /**
@@ -9,20 +10,37 @@ import FontAwesome from 'react-fontawesome';
  * @extends {Component}
  */
 class Menu extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            toggleClass: constants.HORIZONTAL_MENU_CSS_CLASS
+        }
+        this.handleSmallMenuClick = this.handleSmallMenuClick.bind(this);
+    }
+
+    handleSmallMenuClick() {
+        if(this.state.toggleClass === constants.HORIZONTAL_MENU_CSS_CLASS || this.state.toggleClass === constants.EMPTY_STRING) {
+            this.setState({
+                toggleClass: constants.VERTICAL_MENU_CSS_CLASS
+            });
+        }
+        else {
+            this.setState({
+                toggleClass: constants.EMPTY_STRING
+            });
+        }
+    }
+
     render() {
         return (
-            <div className="Menu">
+            <div className = {`${constants.HORIZONTAL_MENU_CSS_CLASS} ${this.state.toggleClass}`} onClick = {this.handleSmallMenuClick}>
                 <ul>
                     <li><NavLink to="/"><FontAwesome name="home" /> Home</NavLink></li>
-                    <li><NavLink to="/film"><FontAwesome name="film" /> Films</NavLink></li>
-                    <li><NavLink to="/language"><FontAwesome name="language" /> By Language</NavLink></li>
                     <li><NavLink to="/originals"><FontAwesome name="camera-retro" /> Originals</NavLink></li>
-                    <li><NavLink to="/tv"><FontAwesome name="tv" /> TV Programmes</NavLink></li>
-                    <li><NavLink to="/profile"><FontAwesome name="user-circle" /> Profile</NavLink></li>
-                </ul>
+                </ul>                
                 <div className="Menu-bars-small">
                     <FontAwesome name="bars" />
-                </div>
+                </div>                
             </div>
         );
     }
