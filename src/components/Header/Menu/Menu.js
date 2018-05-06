@@ -35,8 +35,13 @@ class Menu extends Component {
         return (
             <div className = {`${constants.HORIZONTAL_MENU_CSS_CLASS} ${this.state.toggleClass}`} onClick = {this.handleSmallMenuClick}>
                 <ul>
-                    <li><NavLink to="/"><FontAwesome name="home" /> Home</NavLink></li>
+                    <li><NavLink to="/home"><FontAwesome name="home" /> Home</NavLink></li>
                     <li><NavLink to="/originals"><FontAwesome name="camera-retro" /> Originals</NavLink></li>
+                    <li>
+                        <a href={`${process.env.REACT_APP_AWS_IMPLICIT_GRANT_ENDPOINT}?response_type=token&client_id=${process.env.REACT_APP_AWS_COGNITO_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_AWS_COGNITO_CALLBACK_URL}`}>
+                            <FontAwesome name="power-off" /> LogOff
+                        </a>
+                    </li>
                 </ul>                
                 <div className="Menu-bars-small">
                     <FontAwesome name="bars" />
