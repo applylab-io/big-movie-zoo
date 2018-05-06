@@ -16,6 +16,7 @@ class Content extends Component {
         return (
             <div className="Content">
                 <Route exact path='/' render={() => <Redirect to="/home" />} />
+                <Route exact path='/big-movie-zoo' render={() => <Redirect to="/home" />} />
                 <Route path='/home' component={Home} />
                 <Route path='/stream/*' component={Stream} />
             </div>

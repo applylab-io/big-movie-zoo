@@ -10,18 +10,12 @@ script:
 deploy:
   - provider: pages
     skip_cleanup: true
-    env:
-      global:
-        - REACT_APP_AWS_COGNITO_CALLBACK_URL=$aws_cognito_oauth_callback_url_gh
     github_token: $github_travis_token
     local_dir: build
     on:
       branch: develop
   - provider: s3
     skip_cleanup: true
-    env:
-      global:
-        - REACT_APP_AWS_COGNITO_CALLBACK_URL=$aws_cognito_oauth_callback_url_s3
     access_key_id: $aws_access_key_id
     secret_access_key: $aws_secret_access_key
     bucket: $aws_site_s3_bucket
