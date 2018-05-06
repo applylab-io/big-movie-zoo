@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {HashRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import Header from '../Header/Header';
 import Content from '../Content/Content';
 import Footer from '../Footer/Footer';
@@ -13,13 +13,13 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div className="App">
           <Header />
           <Content />
           <Footer />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }
