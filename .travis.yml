@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm test
+  - npm run build
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $github_travis_token
+    local_dir: build
+    on:
+      branch: develop
+  - provider: s3
+    skip_cleanup: true
+    access_key_id: $aws_access_key_id
+    secret_access_key: $aws_secret_access_key
+    bucket: $aws_site_s3_bucket
+    region: $aws_site_s3_bucket_region
+    github_token: $github_travis_token
+    local_dir: build
+    on:
+      branch: master

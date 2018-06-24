@@ -1,0 +1,35 @@
+{
+  "name": "big-movie-zoo",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "amazon-cognito-identity-js": "^2.0.3",
+    "aws-amplify": "^0.3.3",
+    "aws-amplify-react": "^0.1.43",
+    "font-awesome": "^4.7.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "uuid": "^3.2.1",
+    "video.js": "^6.7.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "preversion": "npm run test",
+    "version": "npm run build",
+    "postversion": "git push",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "author": "Applylab.io",
+  "license": "MIT",
+  "homepage": "https://applylab-io.github.io/big-movie-zoo/",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}

@@ -1,0 +1,29 @@
+.Logo {
+  animation: Logo-scale 1s linear;
+}
+
+.Logo > img {
+  height: 30px;
+  padding-left: 15px;
+}
+
+/*Medium Screens*/
+@media all and (max-width: 800px) {
+  .Logo > img{
+    height: 20px;
+    padding-left: 10px;      
+  }
+}
+
+/*Small Screens*/
+@media all and (max-width: 500px) {
+  .Logo > img{
+      height: 10px;
+      padding-left: 10px;
+  }
+}
+
+@keyframes Logo-scale {
+  from { transform: scale(1.5); }
+  to { transform: scale(1); }
+}

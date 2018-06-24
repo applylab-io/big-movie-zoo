@@ -1,0 +1,88 @@
+/*Large Screens*/
+.Menu-h {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.Menu-h > ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+}
+
+.Menu-h li{
+    background-color: #222;
+}
+
+.Menu-h a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    color: gray;
+}
+
+.Menu-bars-small {
+    display: none;
+    color: gray;
+}
+
+/*Medium Screens*/
+@media all and (max-width: 800px) {
+    .Menu-h > ul{
+        justify-content: space-around;
+    }
+    .Menu-h a{
+        font-size: x-small;
+        color: gray;
+    }
+    .Menu-h li{
+        background-color: #222;
+    }
+}
+
+/*Small Screens*/
+@media all and (max-width: 640px) {
+    .Menu-h > ul{
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0s, opacity 0.5s linear;
+        transition: visibility 0s, opacity 0.5s linear;        
+    }
+
+    .Menu-v {
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: flex-end;
+    }
+
+    .Menu-v > ul {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        flex-flow: column;
+        justify-content: flex-end;
+        list-style: none;
+        margin: 0;
+    }
+
+    .Menu-v a{
+        text-decoration: none;
+        display: inline-block;
+        padding: 1em;
+        color: gray;
+        background-color: #222;
+    }    
+
+    .Menu-v li:hover {
+        background-color: black
+    }
+
+    .Menu-bars-small {
+        padding: 0.5em;
+        display: inline-block;
+        text-align: right;
+    }
+}
