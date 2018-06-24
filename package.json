@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "amazon-cognito-identity-js": "^2.0.3",
+    "aws-amplify": "^0.3.3",
+    "aws-amplify-react": "^0.1.43",
     "font-awesome": "^4.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
