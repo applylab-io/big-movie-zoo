@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter} from 'react-router-dom';
-import {CognitoUserPool, CookieStorage} from 'amazon-cognito-identity-js';
+import {CognitoUserPool} from 'amazon-cognito-identity-js';
 import Header from '../Header/Header';
 import Content from '../Content/Content';
 import Footer from '../Footer/Footer';
