@@ -22,5 +22,6 @@ deploy:
     region: $aws_site_s3_bucket_region
     github_token: $github_travis_token
     local_dir: build
+    acl: public_read
     on:
       branch: master
