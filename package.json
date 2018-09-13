@@ -28,7 +28,6 @@
   },
   "author": "Applylab.io",
   "license": "MIT",
-  "homepage": ".",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   }
