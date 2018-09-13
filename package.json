@@ -28,7 +28,7 @@
   },
   "author": "Applylab.io",
   "license": "MIT",
-  "homepage": "https://applylab-io.github.io/big-movie-zoo/",
+  "homepage": ".",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   }
